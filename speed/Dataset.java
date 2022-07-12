@@ -31,9 +31,9 @@ public class Dataset {
 	}
 	
 	public void setSpeed(double sp) {
-		speed=sp;
+		if(sp<0)
+			System.out.println("invalid value "+sp);
+		else
+			speed=sp;
 	}
-
-	
-	
 }

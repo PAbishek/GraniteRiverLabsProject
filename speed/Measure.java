@@ -1,10 +1,12 @@
 package speed;
 
-public class Measure 
+public class Measure extends Grl
 {
-	public static  double calc(double distance, double time) 
+	public void calculate() 
 	{
-		return distance/time;
+		for(Dataset d:arr) {
+			d.setSpeed(d.getDistance()/d.getTime());
+		}
 	}
 
 }

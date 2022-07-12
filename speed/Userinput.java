@@ -1,9 +1,8 @@
 package speed;
 import java.util.*;
 
-public class Userinput {
+public class Userinput extends Grl {
 	Scanner sc=new Scanner(System.in);
-	static ArrayList<Dataset> arr=new ArrayList<>();
 	public void getInput() {
 		int n=1;
 		while(n<11) {
@@ -13,14 +12,5 @@ public class Userinput {
 			arr.add(new Dataset(dist,time));
 			n++;
 		}
-	}
-	public void calculate() {
-		for(Dataset d:arr) {
-			double t=Measure.calc(d.getDistance(),d.getTime());
-			d.setSpeed(t);
-		}
-	}
-	public void print(){
-		ShowResults.printCsv(arr);
 	}
 }

@@ -1,16 +1,15 @@
 package speed;
 
 import java.io.*;
-import java.util.ArrayList;
 
-public class ShowResults {
+public class ShowResults extends Grl {
 
-	public static void printCsv(ArrayList<Dataset> arr) {
+	public void printCsv() {
 		try {
 			String s1="Distance";
 			String s2="Time";
 			String s3="Speed";
-			File csvFile=new File("sample.csv");
+			File csvFile=new File("output.csv");
 			PrintWriter pw=new PrintWriter(csvFile);
 			pw.printf("%s, %s, %s",s1,s2,s3);
 			pw.println();
